@@ -36,3 +36,11 @@ font-family: 'Courier New', Courier, monospace;
 border-radius: 5px;
 box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
 }
+
+/*Media Query*/
+@media screen and (max-width:1000px){
+  .container{
+    background-position: center center;
+    background-size: cover;
+  }
+}
