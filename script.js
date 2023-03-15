@@ -1,15 +1,12 @@
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
-
+//HATİCE
 // Disable/Enable Button
-function toggleButton() {
-  button.disabled = !button.disabled;
-}
 
 // VoiceRSS Speech Function
-function tellMe(joke) {
-  const jokeString = joke.trim().replace(/ /g, '%20');
-  // VoiceRSS Speech Parameters
+
+  /* VoiceRSS Speech Parameters
+  function test(){ 
   VoiceRSS.speech({
     key: 'c7be60ce5cf54115914d67a440eec578',
     src: jokeString,
@@ -21,28 +18,28 @@ function tellMe(joke) {
   });
 }
 
-// Get jokes from Joke API
+test();*/
+
+
+//Get Jokes From Joke API
 async function getJokes() {
-  let joke = '';
-  const apiUrl = 'https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,racist,sexist';
-  try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    // Assign One or Two Part Joke
-    if (data.setup) {
-      joke = `${data.setup} ... ${data.delivery}`;
-    } else {
-      joke = data.joke;
-    }
-    // Passing Joke to VoiceRSS API
-    tellMe(joke);
-    // Disable Button
-    toggleButton();
-  } catch (error) {
-    // Catch Error Here
+    let joke='';
+    const apiUrl="https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single"
+    try{
+        const response= await fetch(apiUrl);
+        const data= await response.json();
+if(data.setup) {
+    joke=`${data.setup} ... ${data.delivery}`;
+} 
+else {
+    joke=data.joke;
+} 
+console.log(joke);
   }
+
+    catch(error) {
+        console.log("whoops");
+    }
 }
 
-// Event Listeners
-button.addEventListener('click', getJokes);
-audioElement.addEventListener('ended', toggleButton);
+getJokes();
