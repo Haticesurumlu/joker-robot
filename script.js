@@ -20,6 +20,11 @@ const audioElement = document.getElementById('audio');
 
 test();*/
 
+//Passing Joke to VoiceRSS
+function tellMe(joke) {
+    console.log("tell me:",joke)
+}
+
 
 //Get Jokes From Joke API
 async function getJokes() {
