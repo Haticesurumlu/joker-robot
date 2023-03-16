@@ -39,7 +39,7 @@ if(data.setup) {
 else {
     joke=data.joke;
 } 
-console.log(joke);
+tellMe(joke);
   }
 
     catch(error) {
