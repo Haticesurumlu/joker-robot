@@ -5,8 +5,9 @@
 https://haticesurumlu.github.io/joker-robot/
 
 ## API
-https://sv443.net/jokeapi/v2/
-https://rapidapi.com/voicerss/api/text-to-speech-1
+* [Text to Speech](https://rapidapi.com/voicerss/api/text-to-speech-1)
+* [Joke API]( https://sv443.net/jokeapi/v2/)
+
 
 ## Communication Between APIs
 
